@@ -1,0 +1,2 @@
+# commic_downloader
+漫画サイトからダウンロードするライブラリ
