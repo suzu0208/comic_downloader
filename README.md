@@ -1,4 +1,4 @@
-# commic_downloader
+# comic_downloader
 漫画サイトからダウンロードするライブラリです。
 
 ## 詳細
@@ -8,6 +8,7 @@
 * [くらげバンチ](https://kuragebunch.com/)
 * [少年ジャンプ＋](https://shonenjumpplus.com/)
 * [マンガクロス](https://mangacross.jp/)
+* [マンガボックス](https://www.mangabox.me/)
 
 ## 使い方
 
