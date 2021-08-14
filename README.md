@@ -13,5 +13,5 @@
 ## 使い方
 
 ```
-python -m commic_downloader <保存先のルートディレクトリ> <ページのURL> <ページのURL> ...
+python -m comic_downloader <保存先のルートディレクトリ> <ページのURL> <ページのURL> ...
 ```
