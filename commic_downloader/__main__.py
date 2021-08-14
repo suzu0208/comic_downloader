@@ -2,9 +2,10 @@
  
 import sys
 
-from .manga_cross import download as mc_dl
 from .jamp_plus import download as j_dl
 from .kurage_bunch import download as kb_dl
+from .manga_box import download as mb_dl
+from .manga_cross import download as mc_dl
 
 def download(url:str, root_dir:str):
     if 'mangacross.jp' in url:
@@ -13,6 +14,8 @@ def download(url:str, root_dir:str):
         j_dl(url, root_dir)
     elif 'kuragebunch.com' in url:
         kb_dl(url, root_dir)
+    elif 'www.mangabox.me' in url:
+        mb_dl(url, root_dir)
     else:
         print('サポート外のサイトです。')
 
