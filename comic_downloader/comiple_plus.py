@@ -11,7 +11,7 @@ agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, li
 
 def download(url:str, root_dir:str):
     """
-    くらげバンチのコミックをダウンロードします。
+    コミプレのコミックをダウンロードします。
 
     * <root_dir>\作品名\話数 のディレクトリに保存する。
     * ファイル名は 01.jpg からの連番。
@@ -29,7 +29,7 @@ def download(url:str, root_dir:str):
     j = json.loads(req.text)
 
     title = j['readableProduct']['series']['title']
-    number = j['readableProduct']['title']
+    number = j['readableProduct']['number']
     dir = os.path.join(root_dir, title, str(number).zfill(3))
     os.makedirs(dir, exist_ok=True)
 
@@ -59,11 +59,11 @@ def convert(page):
     """
     data = requests.get(page['src'], headers={'User-Agent': agent}).content
     in_image = Image.open(BytesIO(data))
-    out_image = Image.open(BytesIO(data))   # ちょっとの分はバラバラになっていないのでSrcをそのまま使う
+    out_image = Image.open(BytesIO(data))
 
-    # 画像は4分割+ちょっとに分割されている
-    width = in_image.width - 12
-    height = in_image.height - 16
+    # 画像は4分割されている
+    width = in_image.width
+    height = in_image.height
 
     crop_width = round(width/4)
     crop_height = round(height/4)
@@ -77,7 +77,7 @@ def convert(page):
     return out_image
 
 if __name__ == "__main__":
-    print("くらげバンチのページのURLを追加してください。（空でDL開始）\n")
+    print("コミプレのページのURLを追加してください。（空でDL開始）\n")
     urls = []
     while True:
         url = input("URL : ")
@@ -85,5 +85,5 @@ if __name__ == "__main__":
             break
         urls.append(url)
     for url in urls:
-        download(url, 'D:\\')
+        download(url, 'D:')
     

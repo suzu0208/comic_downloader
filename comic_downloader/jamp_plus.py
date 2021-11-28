@@ -77,8 +77,6 @@ def convert(page):
     return out_image
 
 if __name__ == "__main__":
-    download('https://shonenjumpplus.com/episode/10834108156645718158', 'D:\\')
-
     print("ジャンプ+のページのURLを追加してください。（空でDL開始）\n")
     urls = []
     while True:

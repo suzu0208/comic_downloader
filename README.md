@@ -6,6 +6,7 @@
 次の漫画サイトに対応しています。
 
 * [くらげバンチ](https://kuragebunch.com/)
+* [コミプレ](https://viewer.heros-web.com/)
 * [少年ジャンプ＋](https://shonenjumpplus.com/)
 * [マンガクロス](https://mangacross.jp/)
 * [マンガボックス](https://www.mangabox.me/)
